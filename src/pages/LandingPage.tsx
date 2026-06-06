@@ -12,7 +12,6 @@ import { TrialModal } from '../components/marketing/TrialModal'
 export const LandingPage: React.FC = () => {
   const location = useLocation()
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedPlan, setSelectedPlan] = useState('pro')
 
   useEffect(() => {
     if (location.hash) {
@@ -27,8 +26,7 @@ export const LandingPage: React.FC = () => {
     }
   }, [location])
 
-  const handleSubscribe = (plan: string) => {
-    setSelectedPlan(plan)
+  const handleSubscribe = () => {
     setIsModalOpen(true)
   }
 
@@ -45,7 +43,6 @@ export const LandingPage: React.FC = () => {
       <TrialModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        plan={selectedPlan}
       />
     </div>
   )

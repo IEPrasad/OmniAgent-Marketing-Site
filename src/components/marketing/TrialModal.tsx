@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Mail, Building2, ChevronRight, Database, BrainCircuit, ShieldCheck, Lock } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 
 interface TrialModalProps {
   isOpen: boolean
   onClose: () => void
-  plan?: string
 }
 
-export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose, plan = 'free' }) => {
+export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [company, setCompany] = useState('')
   const [useCase, setUseCase] = useState('')
   const [error, setError] = useState('')
-  const navigate = useNavigate()
 
   // Reset state when opened
   useEffect(() => {
