@@ -8,7 +8,7 @@ import { Terms } from './pages/Terms'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/OmniAgent">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/checkout" element={<Checkout />} />

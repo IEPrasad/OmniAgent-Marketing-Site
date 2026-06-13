@@ -69,12 +69,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onSubscribe }) => {
             </a>
           ))}
         </div>
-        <button 
-          onClick={() => onSubscribe('pro')}
-          className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-6 py-2.5 rounded-xl text-sm font-black transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-0.5 active:translate-y-0"
-        >
-          Start Free Trial
-        </button>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.springleafy.com"
+            className="hidden sm:flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-white transition-colors group"
+          >
+            <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Springleafy
+          </a>
+          <button 
+            onClick={() => onSubscribe('pro')}
+            className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-6 py-2.5 rounded-xl text-sm font-black transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Start Free Trial
+          </button>
+        </div>
       </div>
     </nav>
   )
