@@ -8,7 +8,7 @@ import { Terms } from './pages/Terms'
 
 function App() {
   return (
-    <BrowserRouter basename="/OmniAgent">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/checkout" element={<Checkout />} />
